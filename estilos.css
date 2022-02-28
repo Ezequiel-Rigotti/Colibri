@@ -39,7 +39,11 @@ a {
 }
 
 
-/*Menu Hamburguesa*/
+
+
+/*----------------------------*/
+/*-----MENU HAMBUEGUESA------*/
+/*----------------------------*/
 
 
 /*desabilita el menu hamburguesa-3 lineas- cuando esta activo menu escritorio*/
@@ -135,7 +139,9 @@ input:checked~label .ham-3 {
 
 
 
-
+/*---------------------------------------------*/
+/*----CABECERA PARA SECCIONES NAVEGABLES------*/
+/*---------------------------------------------*/
 
 
 /*Estilos para cabeceras de secciones se reutilizan las clases*/
@@ -186,7 +192,11 @@ input:checked~label .ham-3 {
 
 
 
-/*Estilos Index*/
+/*------------------------*/
+*/----------INDEX---------*/
+/*-------------------------*/
+
+
 
 .cuerpo {
     display: grid;
@@ -285,9 +295,6 @@ nav ul li {
 
 
 
-
-
-
 /*  Index nosotros*/
 
 .nosotros div{
@@ -325,36 +332,6 @@ nav ul li {
 }
 
 
-
-
-
-
-/*
-
-.especialidades {
-   
-    margin: 4rem;
-}
-
-.especialidades div {
- 
-    height: auto;
-    display: flex;
-    justify-content: space-around
-    
-}
-
-.especialidades div p{
-    margin-left: -7rem;
-}
-.especialidades div ul{
-    margin-top: 2rem;
-   
-}
-
-*/
-
-
 /*  index galeria */
 
 .galeria{  
@@ -382,7 +359,10 @@ nav ul li {
 
 }
 
+
 /*  index por que elegirnos*/
+
+
 .porqueElegirnos{
     width: 100%;
     height: 30rem;
@@ -420,6 +400,40 @@ nav ul li {
 }
 
 
+/*FOOTER*/
+
+footer{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.piePagina__color{
+    background: linear-gradient(70deg, rgb(214, 190, 190), rgb(228, 135, 135));    
+}
+
+piePagina__titulos{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.125rem;
+
+}
+
+.piePagina_parrafos{
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+/*------------------------------------*/
+/*---------SECCIONES NAVEGABLES-------*/
+/*------------------------------------*/
+
+
 
 /* Seccion nosotros */
 
@@ -429,8 +443,6 @@ nav ul li {
     height: auto;
     margin-top: 4rem;
 }
-
-
 
 .nos__intro {
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
@@ -444,10 +456,7 @@ nav ul li {
     height: 15rem;
 }
 
-
-
 /* seccion especialidades */
-
 
 .esp__intro {
     width: auto;
@@ -459,8 +468,6 @@ nav ul li {
 }
 
 /* GRID areas */
-
-
 
 .esp {
     display: grid;
@@ -570,30 +577,19 @@ section {
     height: 10rem;
 }
 
-/*estilos Footer*/
-footer{
-    width: 100%;
-    overflow-x: hidden;
-}
 
-.piePagina__color{
-    background: linear-gradient(70deg, rgb(214, 190, 190), rgb(228, 135, 135));    
-}
 
-piePagina__titulos{
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 1.125rem;
+/*-------------------------*/
+/*------MEDIAS QUERIES-----*/
+/*-------------------------*/
 
-}
-
-.piePagina_parrafos{
-    font-size: 1rem;
-}
 
 
 
 
 @media screen and (min-width:320px) and (max-width: 767px) {
+
+    /*Valores Generales*/
 
     p {
         margin-top: 0.8rem;
@@ -764,16 +760,19 @@ piePagina__titulos{
 }
 .porqueElegirnos__parrafos p{
     margin-bottom: 1rem;
+    width: 100%;
+    padding: 1rem
 }
 
 .porqueElegirnos__imagen{
     width: 100%;
-    height: auto;
-    
+    height: 15rem;
+  
+   
 }
 
 .porqueElegirnos__imagen img{
-    height: auto;
+    height: 15rem;
 }
 
 /*MEdias Index Footer*/
@@ -781,6 +780,129 @@ piePagina__titulos{
     text-align: center;
    
 }
+
+
+}
+
+@media screen and (min-width:768px) and (max-width: 899px){
+
+    p {
+
+        margin-top: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+    
+    h1 {
+        margin-left: 0.8rem;
+        margin-bottom: 2.5rem;
+        margin-top: 4.5rem;
+        font-size: 2.375rem;
+    }
+    
+    h2 {
+        font-size: 1.56rem;
+    }
+    
+      
+.cabecera {
+    width: 100%;
+    height: 8rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+/* estilo logo */
+.cabecera img {
+    width: 5rem;
+    height: 4rem;
+    margin-top: 1.8rem;
+    margin-left: 3.5rem;
+}
+
+/*contenedor navegacion*/
+.cabecera nav {
+    width: 60%;
+    display: flexbox;
+    align-content: stretch;
+     margin-top: 2.5rem;
+    margin-right: 1.5rem;
+
+}
+
+
+
+/*  Index Especialidades */
+
+.especialidades div ul{
+    margin: 0 auto;
+    margin-top: 1.5rem;
+}
+
+
+/*  index galeria */
+
+.galeria{  
+    margin: 3.5rem;
+
+}
+.galeria p{
+    width: auto;   
+    margin-left: 3.5rem;
+}
+
+
+
+
+/*  index por que elegirnos*/
+
+
+.porqueElegirnos{
+   
+    margin-bottom: 4.5rem;
+   
+}
+
+.porqueElegirnos__parrafos{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-left: 5rem;    
+}
+
+
+.porqueElegirnos__parrafos p{
+    margin-top: 0.8rem;
+}
+
+
+/*FOOTER*/
+
+
+.piePagina__color{
+    background: linear-gradient(70deg, rgb(214, 190, 190), rgb(228, 135, 135));    
+}
+
+piePagina__titulos{
+    font-size: 0.5rem;
+
+}
+
+.piePagina_parrafos{
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
 
 
 }
