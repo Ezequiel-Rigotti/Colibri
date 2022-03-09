@@ -1,0 +1,35 @@
+/*Estilos generales*/ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+p {
+    margin-top: 2rem;
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.7rem;
+    text-align: justify;
+}
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 1rem;
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+    font-size: 40px;
+}
+
+h2 {
+    font-family: 'Courgette', cursive;
+    font-size: 28px;
+    font-weight: 100;
+}
+
+li,
+a {
+    text-decoration: none;
+    color:black;
+}
