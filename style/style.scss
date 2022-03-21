@@ -907,4 +907,23 @@ piePagina__titulos{
     font-size: 0.8rem;
     text-align: center;
 }
+
+}
+
+
+/*Boleno con sass*/
+$mobile:true;
+.menu-mobile ul {
+    @if $mobile{
+        background: linear-gradient (70deg, #f1ef53, #e7ad0d);
+    }
+}
+
+/*EACH con SASS*/
+$largo:100px;
+@each $imag in colibri1 {
+    .#{$imag} img{
+        width: (largo+50)/2;
+        height: largo;
+    }
 }

@@ -626,3 +626,12 @@ section {
   .piePagina_parrafos {
     font-size: 0.8rem;
     text-align: center; } }
+
+/*Boleno con sass*/
+.menu-mobile ul {
+  background: linear-gradient 70deg, #f1ef53, #e7ad0d; }
+
+/*EACH con SASS*/
+.colibri1 img {
+  width: largo50/2;
+  height: largo; }
