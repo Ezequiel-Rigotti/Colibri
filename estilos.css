@@ -30,8 +30,16 @@ h2 {
 
 li,
 a {
+  
+  color: black; 
   text-decoration: none;
-  color: black; }
+  list-style: none;
+}
+.viñeta{
+  color: orange;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
 
 .cabecera {
   width: 100%;
@@ -76,6 +84,27 @@ piePagina__titulos {
 .piePagina_parrafos {
   font-size: 1rem; }
 
+  .subrayado{
+    border-top: 1px solid orange;
+    width: 5rem;
+    padding: 0;
+    margin-top: -3rem;
+    border-width: medium ;
+    margin-left: 2rem;
+   
+  }
+  .subrayado_esp{
+    border-top: 1px solid orange;
+    width: 10rem;
+    padding: 0;
+    position: relative;
+    top:-1rem;
+    border-width: medium ;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  
 /*----------------------------*/
 /*-----MENU HAMBUEGUESA------*/
 /*----------------------------*/
@@ -157,7 +186,12 @@ input:checked ~ label .ham-3 {
 /*-------------------------*/
 .cuerpo {
   display: grid;
-  grid-template-areas: "cabeza" "nosotros" "especialidades" "galeria" "porque" "pie";
+  grid-template-areas: "cabeza"
+ "nosotros"
+ "especialidades"
+ "galeria"
+ "porque"
+ "pie";
   grid-template-columns: 100%;
   grid-template-rows: auto; }
 
@@ -207,10 +241,12 @@ input:checked ~ label .ham-3 {
 
 /*  index galeria */
 .galeria {
+  width: 100;
+  height: auto;
   margin: 4rem; }
 
 .galeria p {
-  width: auto;
+  width: 50%;
   margin-left: 4rem; }
 
 .galeria div {
@@ -230,7 +266,9 @@ input:checked ~ label .ham-3 {
   margin: 0;
   display: flex;
   flex-direction: row;
-  margin-bottom: 5rem; }
+  margin-bottom: 5rem;
+  border-radius: 20px;
+}
 
 .porqueElegirnos__parrafos {
   width: 50%;
@@ -241,30 +279,50 @@ input:checked ~ label .ham-3 {
   margin-left: 5rem; }
 
 .porqueElegirnos__parrafos h1 {
-  margin-bottom: 0; }
+ margin-top: 1rem;
+  margin-bottom: 0;
+color: rgb(134, 35, 85);
+font-weight: 900;
+}
 
 .porqueElegirnos__parrafos p {
-  margin-top: 1rem; }
+  margin-top: 1rem; 
+  padding: 0.5rem;
+  padding-right: 2rem;
+  color: rgb(71, 66, 66);
+  font-weight: 800;
+}
+
 
 .porqueElegirnos__imagen {
   width: 50%;
-  height: auto; }
+  height: auto;
+ 
+}
 
 .porqueElegirnos__imagen img {
   width: 100%;
-  height: 30rem; }
+  height: 30rem; 
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+
+}
 
 /*------------------------------------*/
 /*---------SECCIONES NAVEGABLES-------*/
 /*------------------------------------*/
 /* Seccion nosotros */
+
 .nos {
   margin-top: 4rem; }
 
 .nos__intro {
   font-family: 'IBM Plex Sans Thai Looped', sans-serif;
   font-style: italic;
-  font-size: 0.75rem; }
+  font-weight: 600;
+  color: chocolate;
+  
+ }
 
 .nos img {
   width: 15rem;
@@ -289,31 +347,91 @@ input:checked ~ label .ham-3 {
   font-family: 'Cookie', cursive;
   color: coral; }
 
+  .nos__desc--prof{
+    font-weight: 600;
+
+  }
+  .subtitulos_2{
+    color: salmon;
+    font-weight: 500;
+    
+  }
+
+  .nos__desc--equipo{
+    width: 90%;
+    margin: 3rem;
+    font-weight: 600;
+    color: chocolate;
+
+  }
+
 .nos__box h2 {
   margin: 3rem; }
 
-.nos__equipo {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 33.33%);
-  grid-template-rows: repeat(8, auto);
-  gap: 0.5rem;
-  margin-left: 8rem; }
+.nos__desc--img {/*CONTIENE LAS FOTOS*/
+width: 100%;
+height: auto;
+display: flex;
+flex-wrap: wrap;
+margin-left:3rem;
 
-.nos__equipo img {
+}
+.nos__des--est
+{
+  color: coral;
+  font-weight: 600;
+  
+}
+
+.nos__des--est2{
+position: relative;
+top: -2.5rem;
+}
+
+.foto{
+ width: 20rem;
+ height: auto;
+ margin-top: 3rem;
+
+ margin-left:auto;
+ margin-right: auto;
+
+
+}  
+
+
+ .nos__desc--img img {
   width: 6.125rem;
   height: 6.75rem; }
 
+
+
+
 /* seccion especialidades */
+
+.espe{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+
 .esp__intro {
   width: auto;
   font-family: 'IBM Plex Sans Thai Looped', sans-serif;
   font-style: italic;
   font-size: 1rem;
-  margin-left: 5%; }
+  margin-left: 5%; 
+  font-weight: 600;
+  color: chocolate;
+  margin-bottom: 2rem;
+}
 
 /* GRID areas */
+
 .esp {
+  width: 100%;
   display: grid;
   grid-template-areas: " especialidad especialidad especialidad especialidad" " especialidad especialidad especialidad especialidad" " especialidad especialidad especialidad especialidad";
   /* fila 3*/
@@ -344,18 +462,29 @@ section {
   height: auto;
   padding: 1rem;
   font-size: 0.80rem; }
+  
+  
+
 
 /*Seccion galeria*/
+
+.margen  {
+  margin-top: 2rem;
+}
 /*Grid area para Podcast*/
 .podcast {
   display: grid;
-  grid-template-areas: "podcast podcast" "podcast podcast";
+  grid-template-areas: "podcast podcast"
+ "podcast podcast";
   grid-template-columns: 1fr 1fr;
   /* tamaño de cada columna*/
   grid-template-rows: auto;
   /* tamaño de cada fila*/
   gap: 2rem;
-  /*espacios entre grid*/ }
+  /*espacios entre grid*/ 
+margin-bottom: 8rem;
+
+}
 
 .gal .podcast {
   grid-area: podcast; }
@@ -372,7 +501,9 @@ section {
   grid-template-rows: auto;
   /* tamaño de cada fila*/
   grid-column-gap: 2rem;
-  /*espacios entre grid*/ }
+  /*espacios entre grid*/ 
+margin-bottom: 8rem;
+}
 
 .gal .videos {
   grid-area: video; }
@@ -387,7 +518,9 @@ section {
   display: grid;
   grid-template-columns: repeat(4, 0.5fr);
   grid-template-rows: repeat(8, 1fr);
-  gap: 1rem; }
+  gap: 1rem; 
+margin-top: 5rem;
+}
 
 .gal .fotos img {
   width: 90%;
@@ -411,12 +544,69 @@ section {
 
 .maps {
   width: 100%;
-  height: 30rem; }
+  height: 30rem;
+margin-top: 3rem;
+margin-bottom: 2rem;
+}
+
+  .gal__des{
+color: chocolate;
+font-weight: 600;
+margin-bottom: 4rem;
+  }
+
+
+/*///////seccion Contacto/////*/
+
+.ubicar{
+  position: relative;
+  right: -16.5rem;
+  top: 0.5rem;
+}
+
+
+.costado{
+  margin-left: 0;
+}
+
+.borTamaño1{
+  width: 20rem;
+  background-color: papayawhip;
+  border: 0.5px solid pink;
+
+}
+
+
+.borTamaño2{
+
+width: 20rem;
+height: 8rem;
+background-color: papayawhip;
+border: 0.5px solid pink;
+
+}
+
+.botcol{
+  background-color: papayawhip;
+border: 0.5px solid pink;
+}
+
+
+
+
+
+
 
 /*-------------------------*/
 /*------MEDIAS QUERIES-----*/
 /*-------------------------*/
+
+
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
+
+
+
   /*Valores Generales*/
   p {
     margin-top: 0.8rem;
@@ -437,6 +627,21 @@ section {
     width: 5rem;
     height: 5rem;
     margin-left: 1rem; }
+    
+    .subrayado{    
+      width: 3rem;
+      margin-top: -1rem;
+      margin-left:auto;
+      margin-right: auto;
+    }
+    .subrayado_esp{
+      margin-left:auto;
+      margin-right: auto;
+    }
+    
+
+
+
   /*------------------- MENU HAMBURGUESA--------------------------*/
   /*contenedor de menu hamburgesa y cruz para desplegar o cerrar menu mobile*/
   .menu-mobile-ham {
@@ -503,14 +708,16 @@ section {
   /*  index por que elegirnos*/
   .porqueElegirnos {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+  margin-bottom: 10rem; }
   .porqueElegirnos__parrafos {
     width: 100%;
     height: auto;
     margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center; 
+  }
   .porqueElegirnos__parrafos h1 {
     margin: 1rem; }
   .porqueElegirnos__parrafos p {
@@ -520,8 +727,13 @@ section {
   .porqueElegirnos__imagen {
     width: 100%;
     height: 15rem; }
+
+    
+
   .porqueElegirnos__imagen img {
-    height: 15rem; }
+    height: 15rem; 
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;}
   /*MEdias Index Footer*/
   .piePagina_parrafos {
     text-align: center; }
@@ -530,42 +742,181 @@ section {
   /*---------------------------------*/
   /* MEdias Seccion nosotros*/
   .nos {
-    margin-top: 3rem; }
+    margin-top: 3rem; 
+  }
   .nos img {
     width: 45%;
     height: auto;
     margin: 0 auto; }
+  .nos h1{
+    display: flex;
+    justify-content: center;
+  }
   .nos__dir {
     display: flex;
     flex-direction: column;
+    padding: 0;
     margin-bottom: 2.5rem;
-    padding-left: 2.5rem;
     align-items: center; }
   .nos__desc {
     display: flex;
     flex-direction: column;
-    text-align: center; }
+    text-align: center; 
+    margin:0 ;}
   .nos__desc p {
     margin: 1rem;
     text-align: justify; }
   .nos__desc--nombre {
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: 'Cookie', cursive;
     color: coral;
-    text-align: center; }
-  .nos__box h2 {
-    margin: 3rem; }
+    display: flex;
+      justify-content: center; }
+      .nos__desc--prof{
+        display: flex;
+      justify-content: center
+
+      }
+  
   .nos__equipo {
     display: flex;
     flex-direction: column;
     margin: 0 auto; }
-  .nos__equipo img {
-    margin: 0 auto; }
-  .nos__equipo img {
-    width: 20%;
-    height: auto; } }
+  
+    .subtitulos_2{
+      display: flex;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+    .nos__desc--img{
+    margin: 0;
+    
+    }
+
+  .foto{
+    display: flex;
+    flex-direction: column;
+     align-items: center;
+  }
+  
+  .nos__des--est{
+    font-size: 1.2rem;
+  }
+  
+
+/*MEDIAS QUERIES Seccion Especialidades*/
+
+
+.espe h1 {
+  display: flex;
+  justify-content: center;
+  margin-top:2rem;
+}
+
+
+.esp {
+  display: flex;
+flex-direction: column;
+align-items: center;
+
+
+}
+
+.esp__intro{
+  font-size: 0.8rem;
+  justify-content: center;
+  ;
+  padding-right: 1rem;
+}
+
+
+/*MediaQueries Galeria*/
+
+.gal h1{
+ display: flex;
+ justify-content: center;
+}
+
+
+.margen  {
+  margin-top: 2rem;
+}
+/*Grid area para Podcast*/
+.podcast {
+ display: flex;
+ flex-direction: column;
+}
+
+.videos {
+  display: flex;
+ flex-direction: column;
+
+}
+
+.gal .videos {
+  grid-area: video; }
+
+.videos iframe {
+  margin-top: -2rem;
+  margin-bottom: 4rem;
+}
+.margen2{
+  margin-top: -6rem;
+}
+
+.fotos {
+  display: flex;
+ flex-direction: column;
+  
+}
+.gal__des{
+  margin-bottom: 0rem;
+display: flex;
+justify-content: center;
+}
+
+
+
+
+
+/*---Medias Queries Seccion Contacto---*/
+
+
+
+.cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cont__centrar{
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+ 
+}
+
+/*////////////////////////////////////
+/////////////////////////////////////
+////Medias Queries 768 a 899/////
+///////////////////////////////////
+//////////////////////////////////*/
+
+
+
+  }
 
 @media screen and (min-width: 768px) and (max-width: 899px) {
+
+/*variables globales*/
+
+  
+    .subrayado{
+     margin-top: -2rem;
+         
+    }
+   
+
   p {
     margin-top: 1.5rem;
     font-size: 1rem;
@@ -582,7 +933,8 @@ section {
     height: 8rem;
     position: -webkit-sticky;
     position: sticky;
-    top: 0; }
+    top: 0;
+  z-index: 2; }
   /* estilo logo */
   .cabecera img {
     width: 5rem;
@@ -596,36 +948,262 @@ section {
     align-content: stretch;
     margin-top: 2.5rem;
     margin-right: 1.5rem; }
-  /*  Index Especialidades */
-  .especialidades div ul {
-    margin: 0 auto;
-    margin-top: 1.5rem; }
-  /*  index galeria */
-  .galeria {
-    margin: 3.5rem; }
-  .galeria p {
-    width: auto;
-    margin-left: 3.5rem; }
-  /*  index por que elegirnos*/
-  .porqueElegirnos {
-    margin-bottom: 4.5rem; }
-  .porqueElegirnos__parrafos {
-    width: 50%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    margin-left: 5rem; }
-  .porqueElegirnos__parrafos p {
-    margin-top: 0.8rem; }
-  /*FOOTER*/
-  .piePagina__color {
-    background: linear-gradient(70deg, #d6bebe, #e48787); }
-  piePagina__titulos {
-    font-size: 0.5rem; }
-  .piePagina_parrafos {
-    font-size: 0.8rem;
-    text-align: center; } }
+  
+  
+  /*  Index nosotros*/
+.nosotros div {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: auto;
+  grid-column-gap: 3rem; }
+
+
+.nosotros div img {
+  width: 95%;
+  height: 13rem; 
+  padding-right: 1rem;
+  margin-top: 1rem;
+}
+
+/*  Index Especialidades */
+
+.especialidades div ul {
+ 
+  margin-top: 0; }
+
+/*  index galeria */
+.galeria {
+  width: 100;
+  height: auto;
+  margin: 4rem; }
+
+.galeria p {
+  width: 95%;
+  margin-left: 1rem;
+margin-top: -1rem; }
+
+.galeria div {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-content: stretch; }
+
+.galeria img {
+  width: 25%;
+  height: 12rem; 
+  margin-right: 0.7rem;}
+
+/*  index por que elegirnos*/
+
+.porqueElegirnos__parrafos {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-left: 3rem; }
+
+
+
+
+.porqueElegirnos__imagen img {
+  
+  height: 25rem; 
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  margin-top: 2rem;
+  padding-right:1.5rem ;
+
+}
+
+
+
+/*Medias Queries 768 Seccion nosotros*/
+
+
+
+.nos__desc--img {/*CONTIENE LAS FOTOS*/
+width: 95%;
+}
+
+.foto{
+  margin-top: 0;
+ text-align: center;
+
+}  
+
+
+ .nos__desc--img img {
+  width: 6.125rem;
+  height: 6.75rem; }
+
+  .nos__des--est{
+    text-align: center;
+  }
+  
+  
+
+
+/* seccion especialidades */
+
+.esp {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.esp div{
+  width: 45%;
+  height: auto;
+}
+
+.esp div img {
+  width: 100%;
+  }
+
+
+  /*///////seccion Contacto/////*/
+
+
+.cont__datos{
+ margin-left: 4rem;
+
+}
+
+
+
+
+
+.costado{
+ 
+  width: 100%;
+}
+
+
+   
+  
+  }
+
+  
+
+  @media screen and (min-width: 900px) and (max-width: 1199px) {
+
+
+.subtitulos_2{
+  margin-top: 1rem;
+}
+
+    /*index seccion*/
+
+    .porqueElegirnos {
+      width: 100%;
+      height: auto;
+    }
+  
+ 
+
+ .nosotros div {
+  margin-left: 2rem;
+  grid-template-columns: 45% 45%;
+ }
+ .nosotros div img {
+   margin-top: 2rem;
+   height: 12rem;
+ }
+
+
+
+ .especialidades div {
+ margin-left: 2rem;
+  grid-template-columns: 45% 45%;
+ }
+  
+
+
+/*footer*/
+ .cont__datos{
+  margin-left: 4rem;
+ 
+ }
+ 
+ .costado{
+  
+   width: 100%;
+ }
+
+/*seccioin especialidades 900 a 1200*/
+
+  .esp {
+  width: 98%;
+  text-align:center;
+  margin-left: 1rem;
+  display: grid;
+  grid-template-areas:  "especialidad especialidad especialidad" 
+                        "especialidad especialidad especialidad" 
+                        "especialidad especialidad especialidad" 
+                        "especialidad especialidad especialidad" ;
+                      
+
+  grid-template-columns: 30%  30% 30%;
+  /* tamaño de cada columna*/
+  grid-template-rows: auto;
+  /* tamaño de cada fila*/
+  gap: 2rem;
+  /*espacios entre grid*/ }
+
+section {
+  grid-area: especialidad;
+  margin: 0;
+}
+  
+.esp div img {
+  width: 90%;
+   }
+
+
+
+.esp div p {
+  font-size: 1rem; }
+
+  .esp__intro{
+    width: 90%;
+    
+  }
+
+  /*seccion nosotros*/
+  .nos__box p{
+    width: 90%;
+    padding: 1rem;
+   }
+   .nos__desc--equipo{
+     width: 50%;
+     padding: 0;
+   }
+  
+.nos__dir {
+  width: 95%;
+  margin-left:2rem;
+   }
+
+  .nos__desc--img{
+    width: 90%;
+    text-align: center;
+  }
+ .nos__des--est{
+   text-align: center;
+ }
+  
+ 
+.gal{
+  margin: 2rem;
+}
+
+.cont{
+  margin: 2rem;
+}
+
+}
+
 
 /*Boleno con sass*/
 .menu-mobile ul {
@@ -635,3 +1213,7 @@ section {
 .colibri1 img {
   width: largo50/2;
   height: largo; }
+
+
+
+
